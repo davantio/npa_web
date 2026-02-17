@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('stats', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->integer('value');
+            $table->string('value');
             $table->string('unit')->nullable();
             $table->string('icon')->nullable();
             $table->boolean('is_visible')->default(true);

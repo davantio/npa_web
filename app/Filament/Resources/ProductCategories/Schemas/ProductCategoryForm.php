@@ -32,19 +32,25 @@ class ProductCategoryForm
                         ])->columns(2),
 
                         Group::make([
+                            TextInput::make('subtitle')
+                                ->maxLength(50),
                             Textarea::make('description')
-                            ->autosize()
-                            ->autosize(),
-                        FileUpload::make('image')
-                            ->nullable()
-                            ->label('Foto Kategori')
-                            ->image()
-                            ->imagePreviewHeight('100')
-                            ->maxSize(2048) // Maks 2MB
-                            ->directory('category_images')
-                            ->disk('public') // pastikan menggunakan disk 'public'
-                            ->downloadable()
-                            ->openable(),
+                                ->autosize(),
+                        ])->columns(2),
+
+                        Group::make([
+                            TextInput::make('icon')
+                                ->maxLength(50),
+                            FileUpload::make('image')
+                                ->required()
+                                ->label('Foto Kategori')
+                                ->image()
+                                ->imagePreviewHeight('100')
+                                ->maxSize(2048) // Maks 2MB
+                                ->directory('category_images')
+                                ->disk('public') // pastikan menggunakan disk 'public'
+                                ->downloadable()
+                                ->openable(),
                         ])->columns(2),
 
                         Toggle::make('is_visible')

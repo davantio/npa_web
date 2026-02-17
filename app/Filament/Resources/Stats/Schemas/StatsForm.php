@@ -25,8 +25,7 @@ class StatsForm
 
                         Group::make([
                             TextInput::make('value')
-                                ->required()
-                                ->numeric(),
+                                ->required(),
                             TextInput::make('unit')
                                 ->default(null)
                                 ->maxLength(255),

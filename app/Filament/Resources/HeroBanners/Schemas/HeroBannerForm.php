@@ -28,7 +28,6 @@ class HeroBannerForm
                             TextInput::make('button_text')
                                 ->default(null),
                             TextInput::make('button_url')
-                                ->url()
                                 ->default(null),
                         ])->columns(2),
 

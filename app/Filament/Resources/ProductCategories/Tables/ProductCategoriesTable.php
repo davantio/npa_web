@@ -19,6 +19,8 @@ class ProductCategoriesTable
             ->columns([
                 TextColumn::make('name')
                     ->searchable(),
+                TextColumn::make('subtitle')
+                    ->searchable(),
                 TextColumn::make('slug')
                     ->searchable(),
                 ToggleColumn::make('is_visible')

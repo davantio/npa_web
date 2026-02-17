@@ -20,8 +20,7 @@ class StatsTable
                 TextColumn::make('title')
                     ->searchable(),
                 TextColumn::make('value')
-                    ->numeric()
-                    ->sortable(),
+                    ->searchable(),
                 TextColumn::make('unit')
                     ->searchable(),
                 TextColumn::make('icon')

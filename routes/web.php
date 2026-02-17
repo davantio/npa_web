@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\LandingController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('layouts.app');
-});
+Route::get('/', [LandingController::class, 'index'])->name('landing');
+
+// Route::get('/product/{slug}', [ProductController::class, 'show'])->name('product.show');
+
