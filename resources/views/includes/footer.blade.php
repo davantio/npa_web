@@ -14,8 +14,8 @@
         <div class="col-lg-2 col-md-3 footer-links">
             <h4>Our Products</h4>
             <ul>
-                @foreach ($productCategories as $category)
-                    <li><a href="#">{{ $category->name }}</a></li>
+                @foreach (\App\Models\ProductCategory::where('is_visible', true)->get() as $category)
+                    <li><a href="{{ route('product.show', $category->slug) }}">{{ $category->name }}</a></li>
                 @endforeach
             </ul>
         </div>
